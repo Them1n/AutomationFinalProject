@@ -24,10 +24,8 @@ public abstract class BaseTest {
         driver.get("https://football.ua/");
         homePage = new HomePage(driver);
         registerPage = new RegisterPage(driver);
-        homePage.navigateToRegister();
         loginPage = new LoginPage(driver);
-        homePage.navigateToLogin();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
     }
 
     @AfterMethod
