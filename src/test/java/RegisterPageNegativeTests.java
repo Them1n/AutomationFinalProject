@@ -13,6 +13,7 @@ public class RegisterPageNegativeTests extends BaseTest {
     @Test
     public void verifyRegistrationWithEmptyUsername() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToRegister();
         registerPage.register("", "s1nedlab3@gmail.com", "Qwerty1234","Qwerty1234");
         registerPage.clickOnAgreementState();
@@ -24,6 +25,7 @@ public class RegisterPageNegativeTests extends BaseTest {
     @Test
     public void verifyRegistrationWithInvalidEmail() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToRegister();
         registerPage.register("Messi1234", "s1nedlab3", "Qwerty1234","Qwerty1234");
         registerPage.clickOnAgreementState();
@@ -35,6 +37,7 @@ public class RegisterPageNegativeTests extends BaseTest {
     @Test
     public void verifyRegistrationWithShortPassword() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToRegister();
         registerPage.register("Messi1234", "s1nedlab3@gmail.com", "123", "123");
         registerPage.clickOnAgreementState();
@@ -46,6 +49,7 @@ public class RegisterPageNegativeTests extends BaseTest {
     @Test
     public void verifyRegistrationWithEmptyFields() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToRegister();
         registerPage.register("", "", "","");
         registerPage.clickOnAgreementState();

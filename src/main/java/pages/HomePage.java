@@ -45,6 +45,9 @@ public class HomePage {
     @FindBy(xpath = "//svg[@style='position: relative; display: block; width: 100%; height: 100%;']") // //a[@style='position: absolute; display: block; width: 40px; height: 40px; top: -20px; right: -20px; background-color: transparent; cursor: pointer;']//svg
     private WebElement advertisement;
 
+    @FindBy(xpath = "//div[@class=\"grv-dialog-host\"]")
+    private WebElement dialogHost;
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -91,4 +94,6 @@ public class HomePage {
     }
 
     public void clickToCloseAdvertisement(){ advertisement.click(); }
+
+    public void clickToCloseDialogHostWindow() { dialogHost.click(); }
 }

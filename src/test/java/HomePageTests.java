@@ -13,6 +13,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifyHomePageTitle() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         String title = driver.getTitle();
         Assert.assertEquals(title, "Football.ua - Новини футболу - Футбол онлайн - Результати матчів, трансляції — football.ua");
     }
@@ -20,6 +21,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifyNavigationToNewsSection() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToNews();
         NewsPage newsPage = new NewsPage(driver);
         Assert.assertEquals(newsPage.getNewsHeader().toUpperCase(), "НОВИНИ УКРАЇНСЬКОГО ТА СВІТОВОГО ФУТБОЛУ");
@@ -28,6 +30,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifyNavigationToMatchesSection() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToMatches();
         MatchesPage matchesPage = new MatchesPage(driver);
         Assert.assertTrue(matchesPage.getMatchesHeader());
@@ -36,6 +39,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifySearchFunctionality() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.search("Лига чемпионов");
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("search"));
@@ -44,6 +48,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifyVideosSectionNavigation() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToVideos();
         VideosPage videosPage = new VideosPage(driver);
         Assert.assertEquals(videosPage.getVideosHeader().toUpperCase(), "ОГЛЯДИ МАТЧІВ, ВІДЕО ГОЛІВ ТА ПРЯМІ ТРАНСЛЯЦІЇ");
@@ -52,6 +57,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifyPhotosSectionNavigation() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToPhotos();
         PhotosPage photosPage = new PhotosPage(driver);
         Assert.assertEquals(photosPage.getPhotosHeader().toUpperCase(), "ФОТО: ЯСКРАВІ КАДРИ ТА ГАЛЕРЕЇ З МАТЧІВ ТА ТРЕНУВАНЬ");
@@ -60,6 +66,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifyClickingOnNewsArticle() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToNews();
         NewsPage newsPage = new NewsPage(driver);
         newsPage.clickFirstArticle();
@@ -71,6 +78,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifyLoginFunctionality() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToLogin();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("s1nedlab2@gmail.com", "Qawsed2410");
@@ -93,6 +101,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifyFacebookLinkNavigation() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToFacebook();
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
@@ -103,6 +112,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifyTwitterLinkNavigation() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToTwitter();
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
@@ -113,6 +123,7 @@ public class HomePageTests extends BaseTest {
     @Test
     public void verifyRssLinkNavigation() {
         homePage.clickToCloseAdvertisement();
+        homePage.clickToCloseDialogHostWindow();
         homePage.navigateToRss();
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
