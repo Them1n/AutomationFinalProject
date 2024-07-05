@@ -96,7 +96,6 @@ public class HomePageTests extends BaseTest {
         homePage.navigateToFacebook();
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
-        wait.until(ExpectedConditions.urlToBe("https://www.facebook.com/footballua/"));
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("https://www.facebook.com/footballua/"));
     }
@@ -107,7 +106,6 @@ public class HomePageTests extends BaseTest {
         homePage.navigateToTwitter();
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
-        wait.until(ExpectedConditions.urlToBe("https://x.com/foot_ua/"));
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("https://x.com/foot_ua/"));
     }
@@ -118,7 +116,6 @@ public class HomePageTests extends BaseTest {
         homePage.navigateToRss();
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
-        wait.until(ExpectedConditions.urlToBe("https://football.ua/rss2.ashx"));
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("https://football.ua/rss2.ashx"));
     }

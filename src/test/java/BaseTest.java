@@ -15,8 +15,6 @@ public abstract class BaseTest {
     protected HomePage homePage;
     protected RegisterPage registerPage;
     protected LoginPage loginPage;
-    protected WebDriverWait wait;
-
     @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();
@@ -25,7 +23,6 @@ public abstract class BaseTest {
         homePage = new HomePage(driver);
         registerPage = new RegisterPage(driver);
         loginPage = new LoginPage(driver);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
     }
 
     @AfterMethod
