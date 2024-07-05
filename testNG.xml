@@ -1,0 +1,46 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="AllTests">
+    <test name="PositiveTests">
+        <classes>
+            <class name="HomePageTests">
+                <methods>
+                    <include name="verifyHomePageTitle"/>
+                    <include name="verifyNavigationToNewsSection"/>
+                    <include name="verifyNavigationToMatchesSection"/>
+                    <include name="verifySearchFunctionality"/>
+                    <include name="verifyVideosSectionNavigation"/>
+                    <include name="verifyPhotosSectionNavigation"/>
+                    <include name="verifyClickingOnNewsArticle"/>
+                    <include name="verifyLoginFunctionality"/>
+                    <include name="verifyFacebookLinkNavigation"/>
+                    <include name="verifyTwitterLinkNavigation"/>
+                    <include name="verifyRssLinkNavigation()"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="LoginNegativeTests">
+        <classes>
+            <class name="LoginPageNegativeTests">
+                <methods>
+                    <include name="verifyLoginWithInvalidCredentials"/>
+                    <include name="verifyLoginWithEmptyUsername"/>
+                    <include name="verifyLoginWithEmptyPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="RegisterNegativeTests">
+        <classes>
+            <class name="RegisterPageNegativeTests">
+                <methods>
+                    <include name="verifyRegistrationWithEmptyUsername"/>
+                    <include name="verifyRegistrationWithInvalidEmail"/>
+                    <include name="verifyRegistrationWithShortPassword"/>
+                    <include name="verifyRegistrationWithEmptyFields"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
