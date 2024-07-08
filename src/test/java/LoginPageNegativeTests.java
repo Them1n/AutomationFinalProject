@@ -1,3 +1,4 @@
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -5,6 +6,11 @@ import org.testng.annotations.Test;
 public class LoginPageNegativeTests extends BaseTest {
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyLoginWithInvalidCredentials() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -16,6 +22,11 @@ public class LoginPageNegativeTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyLoginWithEmptyUsername() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -27,6 +38,11 @@ public class LoginPageNegativeTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyLoginWithEmptyPassword() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();

@@ -8,16 +8,19 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
     WebDriver driver;
 
-    @FindBy(xpath = "//input[@id='loginemail']")
+    @FindBy(id = "loginemail")
     private WebElement usernameInput;
 
-    @FindBy(xpath = "//input[@id='loginpassword']")
+    @FindBy(id = "loginpassword")
     private WebElement passwordInput;
 
     @FindBy(xpath = "//div[@id='loginblock']//button[@class='submit']")
     private WebElement loginButton;
     @FindBy(xpath = "//div[@id='logincontent']//p[@class='error']")
     private WebElement errorMessage;
+
+    @FindBy(xpath = "//a[@class='user-name']")
+    private WebElement userName;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -32,4 +35,6 @@ public class LoginPage {
     public boolean getErrorMessage() {
         return errorMessage.isDisplayed();
     }
+
+    public boolean getUserName() { return userName.isDisplayed();}
 }

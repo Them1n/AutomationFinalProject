@@ -1,3 +1,4 @@
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 
 import org.testng.Assert;
@@ -7,6 +8,11 @@ import java.util.ArrayList;
 
 public class HomePageTests extends BaseTest {
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyHomePageTitle() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -15,6 +21,11 @@ public class HomePageTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyNavigationToNewsSection() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -24,6 +35,11 @@ public class HomePageTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyNavigationToMatchesSection() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -33,6 +49,11 @@ public class HomePageTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifySearchFunctionality() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -42,6 +63,11 @@ public class HomePageTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyVideosSectionNavigation() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -51,6 +77,11 @@ public class HomePageTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyPhotosSectionNavigation() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -60,6 +91,11 @@ public class HomePageTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.BLOCKER)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyClickingOnNewsArticle() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -72,14 +108,18 @@ public class HomePageTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyLoginFunctionality() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToLogin();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("s1nedlab2@gmail.com", "Qawsed2410");
-        homePage.clickToCloseAdvertisement();
-        Assert.assertTrue(driver.findElement(By.xpath("//a[@class='user-name']")).isDisplayed());
+        Assert.assertTrue(loginPage.getUserName());
     }
 
    // @Test
@@ -95,6 +135,11 @@ public class HomePageTests extends BaseTest {
    // }
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyFacebookLinkNavigation() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -106,6 +151,11 @@ public class HomePageTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyTwitterLinkNavigation() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -117,6 +167,11 @@ public class HomePageTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyRssLinkNavigation() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();

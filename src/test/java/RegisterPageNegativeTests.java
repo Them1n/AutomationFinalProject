@@ -1,10 +1,16 @@
 
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RegisterPageNegativeTests extends BaseTest {
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyRegistrationWithEmptyUsername() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -17,6 +23,11 @@ public class RegisterPageNegativeTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyRegistrationWithInvalidEmail() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -29,6 +40,11 @@ public class RegisterPageNegativeTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyRegistrationWithShortPassword() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
@@ -41,6 +57,11 @@ public class RegisterPageNegativeTests extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Denys")
+    @Epic("Epic")
+    @Feature("Feature")
+    @Story("Story")
     public void verifyRegistrationWithEmptyFields() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
