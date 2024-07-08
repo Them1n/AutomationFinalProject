@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ArticlePage {
     WebDriver driver;
 
-    @FindBy(xpath = "//h3")
+    @FindBy(xpath = "//h1")
     private WebElement articleTitle;
 
     public ArticlePage(WebDriver driver) {

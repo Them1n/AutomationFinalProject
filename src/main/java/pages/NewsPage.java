@@ -10,7 +10,7 @@ public class NewsPage {
 
     @FindBy(xpath = "//h1[@class='feed-header']")
     private WebElement newsHeader;
-    @FindBy(xpath = "//h4") // Update the locator to match the first article link
+    @FindBy(xpath = "//h4")
     private WebElement firstArticleLink;
 
     public NewsPage(WebDriver driver) {

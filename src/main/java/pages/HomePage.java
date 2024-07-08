@@ -99,13 +99,8 @@ public class HomePage {
 
     public void clickToCloseDialogHostWindow() {
         WebElement shadowHost = driver.findElement(By.xpath("//div[@class='grv-dialog-host']"));
-
-        // Use JavaScript to access the shadow root
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement shadowButton = (WebElement) js.executeScript("return arguments[0].shadowRoot.querySelector('div > div > button')", shadowHost);
-        // Click the button
         shadowButton.click();
-
     }
 }
-//div[@class='grv-dialog-host']//button[@class='sub-dialog-btn block_btn']

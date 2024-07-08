@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class RegisterPage {
     WebDriver driver;
 
-    @FindBy(xpath = "//input[@placeholder='Укажите логин']")
+    @FindBy(xpath = "//input[@id='username']")
     private WebElement usernameInput;
 
     @FindBy(xpath = "//input[@placeholder='логин@почта.ком']")

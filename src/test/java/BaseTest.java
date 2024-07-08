@@ -18,7 +18,7 @@ public abstract class BaseTest {
     @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://football.ua/");
         homePage = new HomePage(driver);
         registerPage = new RegisterPage(driver);
