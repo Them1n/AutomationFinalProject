@@ -1,9 +1,10 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.JavascriptExecutor;
+
 
 import java.time.Duration;
 
@@ -42,11 +43,8 @@ public class HomePage {
 
     @FindBy(xpath = "//li[@class='rss']")
     private WebElement rssLink;
-    @FindBy(xpath = "//svg[@style='position: relative; display: block; width: 100%; height: 100%;']") // //a[@style='position: absolute; display: block; width: 40px; height: 40px; top: -20px; right: -20px; background-color: transparent; cursor: pointer;']//svg
+    @FindBy(xpath = "//svg[@style='position: relative; display: block; width: 100%; height: 100%;']")
     private WebElement advertisement;
-
-    @FindBy(xpath = "//div[@class=\"grv-dialog-host\"]")
-    private WebElement dialogHost;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -83,7 +81,9 @@ public class HomePage {
         registerLink.click();
     }
 
-    public void navigateToFacebook() { facebookLink.click(); }
+    public void navigateToFacebook() {
+        facebookLink.click();
+    }
 
     public void navigateToTwitter() {
         twitterLink.click();
@@ -93,7 +93,19 @@ public class HomePage {
         rssLink.click();
     }
 
-    public void clickToCloseAdvertisement(){ advertisement.click(); }
+    public void clickToCloseAdvertisement() {
+        advertisement.click();
+    }
 
-    public void clickToCloseDialogHostWindow() { dialogHost.click(); }
+    public void clickToCloseDialogHostWindow() {
+        WebElement shadowHost = driver.findElement(By.xpath("//div[@class='grv-dialog-host']"));
+
+        // Use JavaScript to access the shadow root
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement shadowButton = (WebElement) js.executeScript("return arguments[0].shadowRoot.querySelector('div > div > button')", shadowHost);
+        // Click the button
+        shadowButton.click();
+
+    }
 }
+//div[@class='grv-dialog-host']//button[@class='sub-dialog-btn block_btn']
