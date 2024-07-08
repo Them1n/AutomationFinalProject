@@ -28,7 +28,7 @@ public abstract class BaseTest {
         registerPage = new RegisterPage(driver);
         loginPage = new LoginPage(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.withTimeout(Duration.ofSeconds(8)).pollingEvery(Duration.ofSeconds(2)).ignoring(ElementNotInteractableException.class);
+        wait.withTimeout(Duration.ofSeconds(20)).pollingEvery(Duration.ofSeconds(4)).ignoring(ElementNotInteractableException.class);
     }
 
     @AfterMethod

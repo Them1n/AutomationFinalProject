@@ -11,12 +11,12 @@ public class RegisterPage {
     @FindBy(xpath = "//input[@id='username']")
     private WebElement usernameInput;
 
-    @FindBy(xpath = "//input[@placeholder='логин@почта.ком']")
+    @FindBy(xpath = "//input[@id='login']")
     private WebElement emailInput;
 
-    @FindBy(xpath = "//input[@placeholder='Пароль']")
+    @FindBy(xpath = "//input[@id='password1']")
     private WebElement passwordInput;
-    @FindBy(xpath = "//input[@placeholder='Повторите пароль']")
+    @FindBy(xpath = "//input[@id='password2']")
     private WebElement repeatPasswordInput;
 
     @FindBy(xpath = "//button[@onclick='Login.Register(); return false;']")
