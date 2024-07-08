@@ -18,6 +18,7 @@ public class LoginPageNegativeTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToLogin();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("logincontent")));
         loginPage.login("!!!bye", "$$$$");
         loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();
@@ -34,6 +35,7 @@ public class LoginPageNegativeTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToLogin();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("logincontent")));
         loginPage.login("", "Qwerty1234");
         loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();
@@ -50,6 +52,7 @@ public class LoginPageNegativeTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToLogin();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("logincontent")));
         loginPage.login("s1nedlab2@gmail.com", "");
         loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();

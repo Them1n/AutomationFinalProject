@@ -1,6 +1,7 @@
 import io.qameta.allure.*;
 import org.openqa.selenium.By;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
@@ -117,8 +118,10 @@ public class HomePageTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToLogin();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("logincontent")));
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("s1nedlab2@gmail.com", "Qawsed2410");
+        loginPage.clickLoginSubmitButton();
         Assert.assertTrue(loginPage.getUserName());
     }
 
