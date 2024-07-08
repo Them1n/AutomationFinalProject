@@ -1,4 +1,7 @@
 import io.qameta.allure.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,8 +19,8 @@ public class LoginPageNegativeTests extends BaseTest {
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToLogin();
         loginPage.login("!!!bye", "$$$$");
+        loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();
-        //Assert.assertEquals(errorMessage, "Неверный логин или пароль");
         Assert.assertTrue(errorMessage, "Error message is not displayed.");
     }
 
@@ -32,8 +35,8 @@ public class LoginPageNegativeTests extends BaseTest {
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToLogin();
         loginPage.login("", "Qwerty1234");
+        loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();
-        //Assert.assertEquals(errorMessage, "Неверный логин или пароль");
         Assert.assertTrue(errorMessage, "Error message is not displayed.");
     }
 
@@ -48,8 +51,8 @@ public class LoginPageNegativeTests extends BaseTest {
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToLogin();
         loginPage.login("s1nedlab2@gmail.com", "");
+        loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();
-        //Assert.assertEquals(errorMessage, "Неверный логин или пароль");
         Assert.assertTrue(errorMessage, "Error message is not displayed.");
     }
 }

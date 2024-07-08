@@ -30,11 +30,12 @@ public class LoginPage {
     public void login(String username, String password) {
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
-        loginButton.click();
     }
     public boolean getErrorMessage() {
         return errorMessage.isDisplayed();
     }
 
     public boolean getUserName() { return userName.isDisplayed();}
+
+    public void clickLoginSubmitButton() { loginButton.click(); }
 }
