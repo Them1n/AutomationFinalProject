@@ -17,7 +17,7 @@ public class RegisterPageNegativeTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToRegister();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("registercontent")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("registercontent")));
         registerPage.register("", "s1nedlab3@gmail.com", "Qwerty1234","Qwerty1234");
         registerPage.clickOnAgreementState();
         registerPage.clickOnRegisterButton();
@@ -35,7 +35,7 @@ public class RegisterPageNegativeTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToRegister();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("registercontent")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("registercontent")));
         registerPage.register("Messi1234", "s1nedlab3", "Qwerty1234","Qwerty1234");
         registerPage.clickOnAgreementState();
         registerPage.clickOnRegisterButton();
@@ -53,7 +53,7 @@ public class RegisterPageNegativeTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToRegister();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("registercontent")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("registercontent")));
         registerPage.register("Messi1234", "s1nedlab3@gmail.com", "123", "123");
         registerPage.clickOnAgreementState();
         registerPage.clickOnRegisterButton();
@@ -71,7 +71,7 @@ public class RegisterPageNegativeTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToRegister();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("registercontent")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("registercontent")));
         registerPage.register("", "", "","");
         registerPage.clickOnAgreementState();
         registerPage.clickOnRegisterButton();

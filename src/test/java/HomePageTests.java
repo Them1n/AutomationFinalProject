@@ -118,7 +118,7 @@ public class HomePageTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         homePage.navigateToLogin();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("logincontent")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logincontent")));
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("s1nedlab2@gmail.com", "Qawsed2410");
         loginPage.clickLoginSubmitButton();

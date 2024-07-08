@@ -36,8 +36,8 @@ public class RegisterPage {
     }
 
     public void register(String username, String email, String password, String repeatPassword) {
-        usernameInput.sendKeys(username);
         emailInput.sendKeys(email);
+        usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
         repeatPasswordInput.sendKeys(repeatPassword);
     }
