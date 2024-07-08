@@ -117,11 +117,12 @@ public class HomePageTests extends BaseTest {
     public void verifyLoginFunctionality() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
         homePage.navigateToLogin();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logincontent")));
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("s1nedlab2@gmail.com", "Qawsed2410");
         loginPage.clickLoginSubmitButton();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='user-name']")));
         Assert.assertTrue(loginPage.getUserName());
     }
 

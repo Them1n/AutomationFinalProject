@@ -1,3 +1,4 @@
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,13 +21,14 @@ public abstract class BaseTest {
     @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get("https://football.ua/");
         homePage = new HomePage(driver);
         registerPage = new RegisterPage(driver);
         loginPage = new LoginPage(driver);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.withTimeout(Duration.ofSeconds(8)).pollingEvery(Duration.ofSeconds(2)).ignoring(ElementNotInteractableException.class);
     }
 
     @AfterMethod

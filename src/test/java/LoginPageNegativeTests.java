@@ -17,8 +17,8 @@ public class LoginPageNegativeTests extends BaseTest {
     public void verifyLoginWithInvalidCredentials() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
         homePage.navigateToLogin();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logincontent")));
         loginPage.login("!!!bye", "$$$$");
         loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();
@@ -34,8 +34,8 @@ public class LoginPageNegativeTests extends BaseTest {
     public void verifyLoginWithEmptyUsername() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
         homePage.navigateToLogin();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logincontent")));
         loginPage.login("", "Qwerty1234");
         loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();
@@ -51,8 +51,8 @@ public class LoginPageNegativeTests extends BaseTest {
     public void verifyLoginWithEmptyPassword() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
         homePage.navigateToLogin();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logincontent")));
         loginPage.login("s1nedlab2@gmail.com", "");
         loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();
