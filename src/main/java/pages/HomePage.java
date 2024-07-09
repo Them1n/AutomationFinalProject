@@ -75,9 +75,11 @@ public class HomePage {
 
     public void navigateToLogin() {
         loginLink.click();
+        loginLink.click();
     }
 
     public void navigateToRegister() {
+        registerLink.click();
         registerLink.click();
     }
 
