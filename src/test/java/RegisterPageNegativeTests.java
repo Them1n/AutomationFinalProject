@@ -16,7 +16,6 @@ public class RegisterPageNegativeTests extends BaseTest {
     public void verifyRegistrationWithEmptyUsername() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='reg-link']")));
         homePage.navigateToRegister();
         homePage.navigateToRegister();
         registerPage.register("", "s1nedlab3@gmail.com", "Qwerty1234","Qwerty1234");
@@ -35,7 +34,6 @@ public class RegisterPageNegativeTests extends BaseTest {
     public void verifyRegistrationWithInvalidEmail() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='reg-link']")));
         homePage.navigateToRegister();
         homePage.navigateToRegister();
         registerPage.register("Messi1234", "s1nedlab3", "Qwerty1234","Qwerty1234");
@@ -54,7 +52,6 @@ public class RegisterPageNegativeTests extends BaseTest {
     public void verifyRegistrationWithShortPassword() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='reg-link']")));
         homePage.navigateToRegister();
         homePage.navigateToRegister();
         registerPage.register("Messi1234", "s1nedlab3@gmail.com", "123", "123");
@@ -73,7 +70,6 @@ public class RegisterPageNegativeTests extends BaseTest {
     public void verifyRegistrationWithEmptyFields() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='reg-link']")));
         homePage.navigateToRegister();
         homePage.navigateToRegister();
         registerPage.register("", "", "","");

@@ -17,7 +17,6 @@ public class LoginPageNegativeTests extends BaseTest {
     public void verifyLoginWithInvalidCredentials() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
         homePage.navigateToLogin();
         homePage.navigateToLogin();
         loginPage.login("!!!bye", "$$$$");
@@ -35,7 +34,6 @@ public class LoginPageNegativeTests extends BaseTest {
     public void verifyLoginWithEmptyUsername() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
         homePage.navigateToLogin();
         homePage.navigateToLogin();
         loginPage.login("", "Qwerty1234");
@@ -53,7 +51,6 @@ public class LoginPageNegativeTests extends BaseTest {
     public void verifyLoginWithEmptyPassword() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
         homePage.navigateToLogin();
         homePage.navigateToLogin();
         loginPage.login("s1nedlab2@gmail.com", "");
