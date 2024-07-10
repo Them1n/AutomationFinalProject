@@ -117,6 +117,7 @@ public class HomePageTests extends BaseTest {
     public void verifyLoginFunctionality() {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
+        homePage.clickOnDisclaimerButton();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
         homePage.navigateToLogin();
         LoginPage loginPage = new LoginPage(driver);

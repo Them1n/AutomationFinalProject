@@ -18,6 +18,7 @@ public class RegisterPageNegativeTests extends BaseTest {
         homePage.clickToCloseDialogHostWindow();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='reg-link']")));
         homePage.navigateToRegister();
+        homePage.navigateToRegister();
         registerPage.register("", "s1nedlab3@gmail.com", "Qwerty1234","Qwerty1234");
         registerPage.clickOnAgreementState();
         registerPage.clickOnRegisterButton();
@@ -35,6 +36,7 @@ public class RegisterPageNegativeTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='reg-link']")));
+        homePage.navigateToRegister();
         homePage.navigateToRegister();
         registerPage.register("Messi1234", "s1nedlab3", "Qwerty1234","Qwerty1234");
         registerPage.clickOnAgreementState();
@@ -54,6 +56,7 @@ public class RegisterPageNegativeTests extends BaseTest {
         homePage.clickToCloseDialogHostWindow();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='reg-link']")));
         homePage.navigateToRegister();
+        homePage.navigateToRegister();
         registerPage.register("Messi1234", "s1nedlab3@gmail.com", "123", "123");
         registerPage.clickOnAgreementState();
         registerPage.clickOnRegisterButton();
@@ -71,6 +74,7 @@ public class RegisterPageNegativeTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='reg-link']")));
+        homePage.navigateToRegister();
         homePage.navigateToRegister();
         registerPage.register("", "", "","");
         registerPage.clickOnAgreementState();

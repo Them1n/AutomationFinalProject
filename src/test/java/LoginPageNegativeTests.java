@@ -19,6 +19,7 @@ public class LoginPageNegativeTests extends BaseTest {
         homePage.clickToCloseDialogHostWindow();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
         homePage.navigateToLogin();
+        homePage.navigateToLogin();
         loginPage.login("!!!bye", "$$$$");
         loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();
@@ -36,6 +37,7 @@ public class LoginPageNegativeTests extends BaseTest {
         homePage.clickToCloseDialogHostWindow();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
         homePage.navigateToLogin();
+        homePage.navigateToLogin();
         loginPage.login("", "Qwerty1234");
         loginPage.clickLoginSubmitButton();
         boolean errorMessage = loginPage.getErrorMessage();
@@ -52,6 +54,7 @@ public class LoginPageNegativeTests extends BaseTest {
         homePage.clickToCloseAdvertisement();
         homePage.clickToCloseDialogHostWindow();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='enter-link']")));
+        homePage.navigateToLogin();
         homePage.navigateToLogin();
         loginPage.login("s1nedlab2@gmail.com", "");
         loginPage.clickLoginSubmitButton();

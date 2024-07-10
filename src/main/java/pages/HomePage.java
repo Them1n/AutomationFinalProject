@@ -45,6 +45,8 @@ public class HomePage {
     private WebElement rssLink;
     @FindBy(xpath = "//svg[@style='position: relative; display: block; width: 100%; height: 100%;']")
     private WebElement advertisement;
+    @FindBy(xpath = "//span[@class='k-disclaimer__button']")
+    private WebElement disclaimerButton;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -75,11 +77,9 @@ public class HomePage {
 
     public void navigateToLogin() {
         loginLink.click();
-        loginLink.click();
     }
 
     public void navigateToRegister() {
-        registerLink.click();
         registerLink.click();
     }
 
@@ -98,6 +98,8 @@ public class HomePage {
     public void clickToCloseAdvertisement() {
         advertisement.click();
     }
+
+    public void clickOnDisclaimerButton() { disclaimerButton.click(); }
 
     public void clickToCloseDialogHostWindow() {
         WebElement shadowHost = driver.findElement(By.xpath("//div[@class='grv-dialog-host']"));
